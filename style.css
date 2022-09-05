@@ -313,6 +313,8 @@ ul{
     position: relative;
     display: flex;
     min-height: 65vh;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
     background: linear-gradient(45deg, #fbda61, #ff5acd);
     justify-content: center;
@@ -372,7 +374,7 @@ ul{
     text-align: center;
     width: 100%;
     transition: 0.5s;
-    transform: translateY(150px);
+    transform: translateY(175px);
 }
 .card:hover .contentS .details {
     transform: translateY(0px);
@@ -394,38 +396,13 @@ ul{
     justify-content: space-between;
     margin: 20px 0;
 }
-.card .contentS .details .data h3 {
+.card .contentS .details .data p {
     font-size: 1em;
     color: #555;
     line-height: 1.2em;
     font-weight: 600;
 }
-.card .contentS .details .data h3 span {
-    font-size: 0.85em;
-    font-weight: 400;
-    opacity: 0.5;
-}
-.card .contentS .details .actionBtn {
-    display: flex;
-    justify-content: space-between;
-}
-.card .contentS .details .actionBtn button {
-    padding: 10px 30px;
-    border-radius: 5px;
-    border: none;
-    outline:none;
-    border: none;
-    font-size: 1em;
-    font-weight: 500;
-    background: #ff5f95;
-    color: #fff;
-    cursor: pointer
-}
-.card .contentS .details .actionBtn button:nth-child(2) {
-    border: 1px solid #999;
-    color: #999;
-    background: #fff;
-}
+
 .cardM {
     position: relative;
     margin-left: 50px;
@@ -479,7 +456,7 @@ ul{
     text-align: center;
     width: 100%;
     transition: 0.5s;
-    transform: translateY(150px);
+    transform: translateY(175px);
 }
 .cardM:hover .contentS .details {
     transform: translateY(0px);
@@ -501,41 +478,66 @@ ul{
     justify-content: space-between;
     margin: 20px 0;
 }
-.cardM .contentS .details .data h3 {
+.cardM .contentS .details .data p {
     font-size: 1em;
     color: #555;
     line-height: 1.2em;
     font-weight: 600;
-}
-.cardM .contentS .details .data h3 span {
-    font-size: 0.85em;
-    font-weight: 400;
-    opacity: 0.5;
-}
-.cardM .contentS .details .actionBtn {
-    display: flex;
-    justify-content: space-between;
-}
-.cardM .contentS .details .actionBtn button {
-    padding: 10px 30px;
-    border-radius: 5px;
-    border: none;
-    outline:none;
-    border: none;
-    font-size: 1em;
-    font-weight: 500;
-    background: #ff5f95;
-    color: #fff;
-    cursor: pointer
-}
-.cardM .contentS .details .actionBtn button:nth-child(2) {
-    border: 1px solid #999;
-    color: #999;
-    background: #fff;
 }
 .team h2 {
     line-height: 50px;
     font-size: 45px;
     font-weight: 600;
     display: inline-block;
+}
+@media(max-width: 1200px){
+    .card {
+        height: 190px;
+        width: 400px;
+    }
+    .cardM {
+        height: 225px;
+        width: 450px;
+    }
+  
+    .card:hover , .cardM:hover {
+        height: 300px;
+    }
+    .card .contentS .details {
+        padding: 40px;
+        text-align: center;
+        width: 100%;
+        transition: 0.5s;
+        transform: translateY(175px);
+    }
+    .cardM .contentS .details {
+        padding: 40px;
+        text-align: center;
+        width: 100%;
+        transition: 0.5s;
+        transform: translateY(135px);
+    }
+    .card .img-box {
+        width: 150px;
+        height: 150px;
+    }
+    .cardM .img-box {
+        width: 175px;
+        height: 175px;
+    }
+    .card:hover .img-box {
+        width: 100px;
+        height: 100px;
+    }
+    .cardM:hover .img-box {
+        width: 150px;
+        height: 150px;
+    }
+    .card .contentS .details .data p, .cardM .contentS .details .data p {
+        font-size: 12px;
+    }
+    }
+    .cardM .contentS .details h2, .card .contentS .details h2 {
+        font-size: 1.1em;
+        line-height: 1.2em;
 }

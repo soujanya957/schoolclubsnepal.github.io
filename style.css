@@ -132,6 +132,410 @@ header.sticky ul li a, header.sticky .logo {
     font-size: 16px;
     width: 100%;
 }
-.content ul li p:hover {
+.slider {
+    position: relative;
+    min-height: 75vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+
+
+.foot {
+    position: relative;
+    min-height: 50vh;
+    background-color: #fff;
+}
+
+.slide-row {
+    display: flex;
+    width: 3200px;
+    transition: 0.5s;
+}
+.slide-col {
+    width: 800px;
+    height: 400px;
+    position: relative;
+}
+.user-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.user-img img{
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.user-text {
+    background: #2d3a59;
+    width: 520px;
+    height: 270px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    color: #d3d4d6;
+    padding: 45px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.user-text p {
     font-size: 18px;
+    line-height: 24px;
+}
+.user-text h3 {
+    margin: 35px 0 5px;
+    color: #fff; 
+}
+.container {
+    width: 800px;
+    height: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.indicator {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: -50px;
+}
+.btn {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 4px;
+    border-radius: 15px;
+    background: #f00;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.active {
+    width: 45px;
+}
+.testimonials {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.containerr{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.team {
+    position: relative;
+    display: flex;
+    min-height: 65vh;
+    width: 100%;
+    background: linear-gradient(45deg, #fbda61, #ff5acd);
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 350px;
+    height: 190px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+.card:hover {
+    height: 450px;
+}
+.img-box {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.card:hover .img-box {
+    width: 250px;
+    height: 250px;
+}
+.img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .contentS {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.card .contentS .details {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(150px);
+}
+.card:hover .contentS .details {
+    transform: translateY(0px);
+
+}
+.card .contentS .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+.card .contentS .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+.card .contentS .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.card .contentS .details .data h3 {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+.card .contentS .details .data h3 span {
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+.card .contentS .details .actionBtn {
+    display: flex;
+    justify-content: space-between;
+}
+.card .contentS .details .actionBtn button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline:none;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    background: #ff5f95;
+    color: #fff;
+    cursor: pointer
+}
+.card .contentS .details .actionBtn button:nth-child(2) {
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
+}
+.cardM {
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 350px;
+    height: 250px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+.cardM:hover {
+    height: 450px;
+}
+.cardM .img-box {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.cardM:hover .img-box {
+    width: 250px;
+    height: 250px;
+}
+.img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cardM .contentS {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.cardM .contentS .details {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(150px);
+}
+.cardM:hover .contentS .details {
+    transform: translateY(0px);
+
+}
+.cardM .contentS .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+.cardM .contentS .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+.cardM .contentS .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.cardM .contentS .details .data h3 {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+.cardM .contentS .details .data h3 span {
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+.cardM .contentS .details .actionBtn {
+    display: flex;
+    justify-content: space-between;
+}
+.cardM .contentS .details .actionBtn button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline:none;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    background: #ff5f95;
+    color: #fff;
+    cursor: pointer
+}
+.cardM .contentS .details .actionBtn button:nth-child(2) {
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
+}
+.team h2 {
+    line-height: 50px;
+    font-size: 45px;
+    font-weight: 600;
+    display: inline-block;
 }
